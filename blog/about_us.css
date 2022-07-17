@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap");
+
+/* font-family: 'Poppins', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: rgb(240, 240, 240);
+}
+.navbar li,
+a {
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 20px;
+  /* border: black solid; */
+}
+.navbar li:hover {
+  background-color: #8282e2;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+.navbar a:hover {
+  color: #fff;
+}
+.logo {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: black solid; */
+  margin: 30px;
+}
+.navbar {
+  display: flex;
+  list-style: none;
+  width: 100%;
+}
+hr {
+  margin-top: 20px;
+  border: 1.5px solid 8282e2;
+  width: 95%;
+}
+h1,
+p {
+  text-align: center;
+}
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  margin: 20px 50px;
+  width: 250px;
+  height: 100%;
+  /* background-color: #fff; */
+  border-radius: 40px 40px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+.card img {
+  width: 100%;
+  height: 250px;
+}
+.card .title,
+.description {
+  text-align: center;
+}
+.title {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.description {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.description {
+  color: rgb(129, 128, 128);
+}
+.icon {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+.futer {
+  margin-top: 70px;
+  padding: 50px;
+  background-color: rgb(65, 65, 65);
+  height: 100%;
+}
+.isi-futer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* border: solid black; */
+}
+
+.futer .nama-page img {
+  width: 100%;
+  height: 80px;
+}
+.listing ul li,
+.listing a {
+  /* margin-left: 100px; */
+  color: #fff;
+  list-style: none;
+}
+.isi-futer a {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+}
+.isi-futer a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #8282e2;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+.isi-futer a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.listing li {
+  padding: 5px;
+}
+.listing li:nth-child(1) {
+  font-weight: 700;
+  font-size: 24px;
+  padding-bottom: 15px;
+  padding-top: 0;
+}
+.cp-right {
+  font-size: 12px;
+  color: #fff;
+  list-style: none;
+  line-height: 180px;
+}
+
+/* Responsive HP Landscape */
+@media screen and (max-width: 768px) {
+  .isi-futer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .isi-futer .listing {
+    margin-top: 20px;
+  }
+  .cp-right {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 478px) {
+  header {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  hr {
+    width: 85%;
+  }
+  main p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

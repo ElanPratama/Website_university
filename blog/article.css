@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: rgb(240, 240, 240);
+  /* margin: 40px 100px; */
+  height: 100%;
+}
+/* Navbar */
+#navbar li,
+a {
+  /* display: none; */
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 20px;
+  /* border: black solid; */
+}
+#navbar li:hover {
+  background-color: #8282e2;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+#navbar a:hover {
+  color: #fff;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  padding-top: 30px;
+  /* border: black solid; */
+}
+#navbar {
+  display: flex;
+  list-style: none;
+  width: 60vh;
+  padding-left: 10%;
+  opacity: 0;
+  transition: 0.2s;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 140px;
+}
+header button {
+  cursor: pointer;
+  border: none;
+  height: 100%;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+}
+header button .fa-bars {
+  font-size: 2em;
+}
+.logo {
+  width: 135px;
+  height: 50px;
+}
+main {
+  /* margin: 40px 20px; */
+  margin-top: 80px;
+  /* margin-bottom: 40px; */
+  /* border: solid black; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.utama {
+  /* position: relative; */
+  /* padding: 10px; */
+  /* border: solid black; */
+  /* margin-left: 70px;
+    margin-right: 70px; */
+  /* display: flex;
+    flex-direction: column; */
+  /* border: solid black; */
+  /* width: 640px; */
+  width: 50vw;
+}
+.utama img {
+  width: 100%;
+  height: 100%;
+}
+.utama h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+span {
+  display: flex;
+  line-height: 1;
+  color: rgb(148, 148, 148);
+  font-size: 12px;
+  margin-bottom: 15px;
+  display: none;
+}
+.utama p {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  text-align: justify;
+}
+aside {
+  height: 100%;
+  padding: 10px;
+}
+aside .profile {
+  display: flex;
+  align-items: center;
+}
+aside .foto {
+  height: 62px;
+  width: 60px;
+  border-radius: 50px;
+  margin-right: 20px;
+  display: inline-block;
+  background: url(/assets/rizky.jpeg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+aside p {
+  margin-top: 5px;
+  text-align: justify;
+}
+hr {
+  margin-top: 20px;
+  border: 1.5px solid 8282e2;
+  width: 100%;
+}
+.tgl {
+  font-weight: 700;
+  margin-top: 200px;
+  text-align: center;
+}
+
+/* Futer */
+
+.futer {
+  margin-top: 70px;
+  padding: 50px;
+  background-color: rgb(65, 65, 65);
+}
+.isi-futer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* border: solid black; */
+}
+
+.futer .nama-page img {
+  width: 100%;
+  height: 80px;
+}
+.listing ul li,
+.listing a {
+  /* margin-left: 100px; */
+  color: #fff;
+  list-style: none;
+}
+.isi-futer a {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+}
+.isi-futer a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #8282e2;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+.isi-futer a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.listing li {
+  padding: 5px;
+}
+.listing li:nth-child(1) {
+  font-weight: 700;
+  font-size: 24px;
+  padding-bottom: 15px;
+  padding-top: 0;
+}
+.cp-right {
+  font-size: 12px;
+  color: #fff;
+  list-style: none;
+  line-height: 180px;
+}
+
+/* Futer */
+
+/* Responsive */
+/* Responsive tabelet */
+
+@media screen and (max-width: 1024px) {
+  .utama {
+    width: 95vw;
+  }
+  main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  main h2 {
+    display: none;
+  }
+  hr {
+    width: 95%;
+  }
+  span {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 978px) {
+  /* .utama {
+        width: 95vw;
+    } */
+  #menu {
+    z-index: 100;
+  }
+  nav #navbar {
+    position: absolute;
+    right: 0;
+    top: 130px;
+    width: 50%;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(65, 65, 65);
+    z-index: 1;
+  }
+  #navbar {
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  nav #navbar a {
+    color: #fff;
+  }
+  aside {
+    margin-top: 40px;
+  }
+}
+
+/* Responsive HP Landscape */
+@media screen and (max-width: 768px) {
+  nav {
+    margin: 40px 50px;
+  }
+  .isi-futer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .isi-futer .listing {
+    margin-top: 20px;
+  }
+  .cp-right {
+    margin: auto;
+    width: 50%;
+  }
+}
+/* Responsive HP Portrait */
+@media screen and (max-width: 478px) {
+  /* .utama {
+        width: 95vw;
+    } */
+}

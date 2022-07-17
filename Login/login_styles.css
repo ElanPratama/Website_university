@@ -1,0 +1,125 @@
+body{
+    min-height: 95vh;
+    height: 100%;
+    background-color: rgb(77, 0, 165);
+    /* background-color: #4D00A5; */
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 110%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container{
+    border-radius: 2%;
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    margin-top: 8%;
+    width: 85%;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.img-header{
+    width: 90%;
+    height: auto;
+}
+
+.form-login{
+    margin-top: 4%;
+    width: 75%;
+}
+
+.tbl-form{
+    margin: auto;
+    width: 90%;
+}
+
+.input-utama{
+    width: 95%;
+    border-radius: 10px;
+}
+
+.under-header{
+    margin: 5% 5% 0%; 
+}
+
+.gambar{
+    width: 70%;
+}
+
+p{
+    font-size: 15px;
+}
+
+.btn-submit{
+    margin: auto;
+}
+
+button{
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    /* background-color: rgb(29, 153, 155); */
+    background-color: #4D00A5;
+    /* background-color: rgb(170, 159, 0); */
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    border-color: white;
+}
+
+button:hover{
+    /* border-color: rgb(29, 153, 155); */
+    /* border-color: rgb(170, 159, 0); */
+    border-color: #4D00A5;
+    color: #4D00A5;
+    background-color: white;
+    /* color: rgb(29, 153, 155); */
+    /* color: rgb(170, 159, 0); */
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        border-radius: 2%;
+        height: 450px;
+        width: 350px;
+    }
+
+    p{
+        font-size: 13px;
+    }
+    
+    button{
+        width: 150px;
+        height: 35px;
+    }
+}
+
+@media screen and(max-width: 576px) {
+    .container{
+        border-radius: 2%;
+        height: 350px;
+        width: 280px;
+    }
+
+    p{
+        font-size: 11px;
+    }
+    
+    button{
+        width: 180px;
+        height: 30px;
+    }
+}

@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+body{
+    font-family: 'Poppins', sans-serif; 
+    overflow-x: hidden;
+}
+  
+.gambar{
+    display: flex;
+    width: 50%;
+}
+  
+.logo{
+    width: 30%;
+    margin: 0 5px;
+}
+  
+nav{
+    display: flex;
+    background-color: rgb(51, 28, 116);
+    justify-content: space-around;
+    padding: 15px 15px;
+    color: white;
+}
+  
+.tujuan{
+    width: 50%;
+    padding-top: 2%;
+}
+  
+nav .tujuan ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+  
+nav .tujuan ul li a{
+    color: white;
+    align-items: center;
+    font-size: larger;
+    text-decoration: none;
+}
+
+nav .tujuan ul li a:hover{
+    color: rgb(184, 78, 255);
+    font-size: x-large;
+    transition: 0.3s;
+}
+  
+/* Hamburger menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+  
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -6px;
+    top: -3px;
+    cursor: pointer;
+    z-index: 2;
+}
+  
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+  
+  
+/* Hamburger menu animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+  
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+  
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(-315deg) translate(-1px, -1px);
+}
+  
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(315deg) translate(-1px, 0);
+}
+  
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0)
+}
+  
+.utama{
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-page{
+    margin: auto;
+}
+
+.judul{
+    text-align: center;
+    font-size: 190%;
+}
+
+.under-judul{
+    text-align: center;
+    font-size: 110%;
+}
+
+.menu{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: center;
+}
+
+.container{
+    width: 25%;
+    padding: 5px;
+}
+
+.btn-chat{
+    text-decoration: none;
+    color: white;
+}
+
+.card-chat{
+    background-color: rgb(114, 77, 216);
+    border-radius: 10px;
+    padding: 5px;
+    height: 27vh;
+}
+
+.card-chat:hover{
+    background-color: rgb(234, 216, 253);
+    color: #320081;
+    transition: 0.3s;
+    border: 1px #320081;
+}
+
+.judul-card{
+    text-align: center;
+    font-size: 120%;
+    margin: 12px 8px 12px;
+}
+
+.pembatas{
+    border-top: 2px solid white;
+}
+
+.pembatas-2{
+    border-top: 1px dashed white;
+}
+
+.info{
+    font-size: 80%;
+    margin: 12px 8px 12px;
+}
+
+.info-2{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80%;
+    margin: 8px 10px 8px;
+}
+
+.footer{
+    margin-top: 5vh;
+    height: 24vh;
+    background-color: rgb(51, 28, 116);
+}
+
+.first-color{
+    height: 1.5vh;
+    background-color: rgb(172, 130, 25);
+}
+
+.footer-inti{
+    display: flex;
+    flex-direction: row;
+    padding: 2% 0 0 2%;
+}
+
+.fi-kiri{
+    width: 30%;
+}
+
+.moto{
+    font-family: 'Courgette', cursive;
+    font-size: 120%;
+    color: white;
+}
+
+.fi-kanan{
+    display: flex;
+    padding-left: 40%;
+}
+
+.fi-kanan table{
+    display: flex;
+    color: white;
+}
+
+.table-footer-ico{
+    width:35px;
+}
+
+.table-footer-txt{
+    margin-bottom: 2px;
+}
+
+
+/* Responsive Breakpoint */
+@media screen and (max-width: 768px) {
+    .gambar{
+        /* height: 10vh; */
+        width: 250%;
+    }
+
+    .card-chat{
+        height: 35vh;
+    }
+
+    nav ul{
+      width: 50%;
+    }
+
+    .menu-toggle{
+      display: flex;
+    }
+  
+    nav ul{
+      position: absolute;
+      right: 0;
+      top: 0;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: rgb(30, 7, 94);
+      z-index: 0;
+      width: 100%;
+      transform: translateX(100%);
+      transition: all 1s;
+    }
+  
+    nav ul.slide{
+      transform: translateX(0);
+    }
+
+}
+  
+@media screen and (max-width: 576px) {
+    .card-chat{
+        height: 27vh;
+    }
+    
+    .gambar{
+        display: flex;
+        width: 50%;
+    }
+      
+    .logo{
+        width: 70%;
+        margin: 0 5px;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container{
+        width: 100%;
+    }
+
+    .judul{
+        font-size: 150%;
+    }
+    
+    .under-judul{
+        font-size: 80%;
+    }
+
+    .footer{
+        text-align: center;
+        height: 30vh;
+    }
+
+    .footer-inti{
+        flex-direction: column;
+    }
+
+    .fi-kiri{
+        width: 100%;
+        margin-bottom: 2%;
+    }
+    
+    .fi-kanan{
+        display: flex;
+        text-align: center;
+        padding-left: 0;
+        justify-content: center;
+    }
+}

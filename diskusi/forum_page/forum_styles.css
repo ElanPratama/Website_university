@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+body{
+    font-family: 'Poppins', sans-serif; 
+    overflow-x: hidden;
+}
+  
+.gambar{
+    display: flex;
+    width: 50%;
+}
+  
+.logo{
+    width: 30%;
+    margin: 0 5px;
+}
+  
+nav{
+    display: flex;
+    background-image: linear-gradient(45deg,#8282e2, #62539b);
+    justify-content: space-around;
+    padding: 10px 0;
+    color: white;
+    /* height: 20vh; */
+}
+  
+.tujuan{
+    width: 50%;
+    padding-top: 2%;
+}
+  
+nav .tujuan ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+  
+nav .tujuan ul li a{
+    color: white;
+    align-items: center;
+    font-size: larger;
+    text-decoration: none;
+}
+  
+nav .tujuan ul li a:hover{
+    color: #ccadff;
+    font-size: x-large;
+    transition: 0.5s;
+}
+
+/* Hamburger menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+  
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -6px;
+    top: -3px;
+    cursor: pointer;
+    z-index: 2;
+}
+  
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+  
+  
+/* Hamburger menu animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+  
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+  
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(-315deg) translate(-1px, -1px);
+}
+  
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(315deg) translate(-1px, 0);
+}
+  
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0)
+}
+  
+.utama{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../assets/chat_bg4.jpg);
+    background-size: cover;
+}
+
+.roomchat{
+    /* background-image: url(../assets/chat_bg4.jpg); */
+    /* background-color: rgb(149, 190, 226);
+    background-position: inherit; */
+    /* background-size: cover; */
+    width: 100%;
+    flex-direction: column;
+}
+
+.tombol{
+    margin: auto;
+    width: 6%;
+    align-items: center;
+}
+
+.tombol a{
+    font-size: 200%;
+    color: white;
+    text-decoration: none;
+    width: 25%;
+}
+
+.title{
+    width: 94%;
+}
+
+.chat-header{
+    /* position: sticky; */
+    top: 0;
+    height: 75px;
+    /* background-color: #0e62b1; */
+    background-image: linear-gradient(45deg,#8282e2, #62539b);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.judul-header{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 320%;
+    color: white;
+}
+
+.bubble-user{
+    margin-left: 25px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    width: 45%;
+    border-radius: 0px 15px 15px 15px;
+}
+
+.nama-user{
+    padding-left: 10px;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    font-size: 115%;
+}
+
+.bubble-sender{
+    margin: 10px 25px 0 52%;
+    background-color: whitesmoke;
+    width: 45%;
+    border-radius: 15px 15px 0px 15px;
+}
+
+.pesan{
+    padding-left: 10px;
+    /* margin-right: 10px; */
+    margin: 0 10px 10px 0 ;
+    font-size: 100%;
+}
+
+.jam{
+    text-align: right;
+    margin-right: 8px;
+    padding-bottom: 10px;
+    font-size: 100%;
+}
+.bubble-sender .pesan{
+    padding-top: 10px;
+}
+
+.input-teks{
+    padding: 2% 0 2px;
+}
+
+.inputan{
+    border-radius: 50px;
+    height: 4vh;
+    width: 772%;
+}
+
+/* Responsive Breakpoint */
+@media screen and (max-width: 768px) {
+    nav ul{
+      width: 50%;
+    }
+
+    .menu-toggle{
+      display: flex;
+    }
+  
+    nav ul{
+      position: absolute;
+      right: 0;
+      top: 0;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: #62539b;
+      z-index: 0;
+      width: 100%;
+      transform: translateX(100%);
+      transition: all 1s;
+    }
+  
+    nav ul.slide{
+      transform: translateX(0);
+    }
+
+    .judul-header{
+        font-size: 120%;
+        font-weight: 500;
+    }
+}
+  
+@media screen and (max-width: 576px) {  
+    .gambar{
+        display: flex;
+        width: 50%;
+    }
+      
+    .logo{
+        width: 70%;
+        margin: 0 5px;
+    }
+    
+    .tombol a{
+        margin-left: 2%;
+        font-size: 120%;
+        width: 30%;
+    }
+
+    .judul-header{
+        font-size: 120%;
+        font-weight: 500;
+    }
+
+    .chat-header{
+        height: 50px;
+    }
+
+    .pesan, .jam, .nama-user{
+        font-size: 80%;
+    }
+
+}

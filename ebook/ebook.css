@@ -1,0 +1,312 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.section-navbar{
+    background-image: linear-gradient(45deg,#8282e2, #62539b);
+}
+
+.navbar-nav{
+    padding: 1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ul-tab-1{
+    list-style: none;
+}
+
+.ul-tab-1 li a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.ul-tab-2{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.ul-tab-2 li a{
+    color: white;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.ul-tab-2 li a:hover{
+    border-bottom: 2px solid;
+}
+
+.section-jumbotron{
+    background-image: linear-gradient(45deg,#7878d8, #62539b);
+}
+
+.wrapper-jumbotron{
+    display: flex;
+    padding: 3rem 5rem;
+    align-items: center;
+}
+
+.left{
+    padding: 2rem 3rem 2rem 0;
+}
+
+.left h3{
+    color: white;
+    font-size: 3rem;
+    font-size: 3.4rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.left p{
+    color: white;
+    width: 60%;
+    font-size: 1.1rem;
+}
+
+.left button{
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.right{
+    padding: 2rem 0rem 2rem 3rem;
+}
+
+.bukuIT h3{
+    color: rgb(118, 118, 233);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.bukuArsitek h3{
+    color: rgb(118, 118, 233);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.bukuSejarah h3{
+    color: rgb(118, 118, 233);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.wrapper-card{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.card{
+    padding: 2rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px #9c8dd8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 1rem;
+}
+
+.card:hover{
+    animation-name: animate;
+    animation-duration: 0.5s;
+}
+
+.card1{
+    padding: 2rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px #9c8dd8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 1rem;
+    text-align: justify;
+}
+
+
+
+@keyframes animate{
+    0%{
+        transform: scale(1);
+        transition: 1s;
+    }
+    100%{
+        transform: scale(1.1);
+        transition: 1s;
+    }
+}
+
+
+.sub-footer-1{
+    display: flex;
+    background-image: linear-gradient(45deg,#7878d8, #62539b);
+    justify-content: space-between;
+    padding: 3% 5%;
+}
+
+.kontak div{
+    text-align: center;
+    color: white;
+}
+
+.kontak ul{
+    padding-left: 2rem;
+}
+
+.kontak ul li{
+    list-style: none;
+    text-align: start;
+    color: white;
+}
+
+.kelompok div{
+    text-align: center;
+    color: white;
+}
+
+.kelompok ul{
+    padding-left: 2rem;
+}
+
+.kelompok ul li{
+    list-style: none;
+    text-align: start;
+    color: white;
+}
+
+.akademik div{
+    text-align: center;
+    color: white;
+}
+
+.akademik ul{
+    padding-left: 2rem;
+}
+
+.akademik ul li{
+    list-style: none;
+    text-align: start;
+    color: white;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .wrapper-jumbotron{
+        flex-direction: column-reverse;
+    }
+    .ul-tab-2{
+        display: none;
+    }
+    .right{
+        padding: 2rem 0 2rem 0rem;
+    }
+    .right img{
+        width: 100%;
+    }
+    .left{
+        padding: 2rem 0 2rem 0;
+        text-align: center;
+    }
+    .left p{
+        width: 100%;
+    }
+    .left h3{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .left h3{
+        font-size: 2rem;
+        
+    }
+    .left p{
+        width: 80%;
+    }
+    .left button{
+        font-size: 1rem;
+    }
+    .right{
+        width: 100%;
+    }
+    .right img{
+        width: 100%;
+    }
+    .ul-tab-2{
+        display: flex;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .left h3{
+        font-size: 2rem;
+        
+    }
+    .left p{
+        width: 80%;
+    }
+    .left button{
+        font-size: 1rem;
+    }
+    .right{
+        width: 100%;
+    }
+    .right img{
+        width: 100%;
+    }
+    .buku img{
+        width: 250px;
+    }
+    
+    .wrapper-card{
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .left h3{
+        font-size: 3.4rem;
+    }
+    .left p{
+        width: 60%;
+    }
+    .left button{
+        font-size: 1.5rem;
+    }
+}
+
+
+h2{
+    text-align: center;
+}
+
+.tablel, tr th{
+    background: #35A9D8;
+    color: #fff;
+    font-weight: normal;
+}
+
+.tablel, th, td{
+    padding: 8px 20px;
+    text-align: center;
+}
+
+.tabel1{
+    margin-left: 22%;
+}
+
+

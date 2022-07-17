@@ -1,0 +1,778 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+hr {
+    size: 12px;
+}
+
+#user {
+    display: flex;
+    border-radius: 40px;
+    align-items: center;
+    height: 80px;
+    padding: 10px;
+}
+
+.navbar {
+    background: #2a394f;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    /* text-transform: uppercase; */
+}
+
+.item {
+    height: 50px;
+}
+
+.home {
+    color: #fdfdfd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.informasi {
+    color: #fdfdfd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.ebook {
+    color: #fdfdfd;
+    display: flex;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%;
+}
+
+.diskusi {
+    color: #fdfdfd;
+    display: flex;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%;
+}
+
+.penugasan {
+    color: #fdfdfd;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%;
+}
+
+.btn-out {
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+}
+
+.logout {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.logout:hover {
+    color: #6a88f5;
+    transition: all 0.3s ease;
+}
+
+.home:hover {
+    color: #6a88f5;
+    transition: all 0.3s ease;
+}
+
+.informasi:hover {
+    color: #6a88f5;
+    transition: all 0.3s ease;
+}
+
+.ebook:hover {
+    color: #6a88f5;
+    transition: all 0.3s ease;
+}
+.diskusi:hover {
+    color: #6a88f5;
+    transition: all 0.3s ease;
+}
+.penugasan:hover {
+    color: #6a88f5;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 950px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        max-width: 13000%;
+        padding: 0;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #3629bc;
+    }
+
+    .menu.active {
+        background: #2a394f;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 55vh;
+        font-size: 1.6rem;
+    }
+    
+    .nav-toggle .garis {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+    
+    .item {
+        width: 100%;
+    }
+
+    .home {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .informasi {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    .ebook {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    .diskusi {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    .penugasan {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #menu-mobile {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .btn-out {
+        padding-bottom: 2rem;
+    }
+
+    .logout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .nav-toggle .garis{
+        display: block;
+        cursor: pointer;
+    }
+    #menu-mobile.is-active .garis:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-mobile.is-active .garis:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #menu-mobile.is-active .garis:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+/* Jadwal kelas */
+
+h1 {
+    font-family: 'Poppins', arial;
+    font-size: 2em;
+    border-bottom: 2px solid #6965b2;
+    border-right: 2px solid #5d56de;
+    border-top: 2px solid #8775e2;
+    border-left: 2px solid #283074;
+    width: 400px;
+    text-align: center;
+    -moz-box-shadow:4px 4px 5px #888888;
+    -ms-box-shadow:4px 4px 5px #888888;
+    -webkit-box-shadow:4px 4px 5px #888888;
+    -o-box-shadow:4px 4px 5px #888888;
+    box-shadow: 4px 4px 5px #888888;
+    margin-top: 10px;
+   
+}
+
+.position1 {
+    margin: 50px;
+    width: 350px;
+    float: left;
+    height: auto;
+}
+
+
+.text1 {
+    /* padding: 15px; */
+    margin: 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gulzar', fantasy;
+    color: black;
+}
+
+.pengampu1 {
+    font-family: 'Montserrat', arial;
+    color: black;
+    margin: 20px;
+}
+
+
+#jadwal1 {
+    
+    border-radius: 15px;
+    width: 70px;
+    background: #8379f1;
+    font-family: 'Poppins', arial;
+    color: white;
+}
+
+#web {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 30px;
+    width: 350px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Jadwal Selasa */
+
+.position2 {
+    margin: 50px;
+    float: left;
+    width: 340px;
+    height: auto;
+}
+
+.pengampu2 {
+    font-family: 'Montserrat', arial;
+    color: black;
+    margin: 20px;
+}
+
+.text2 {
+    margin: 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gulzar', fantasy;
+    color: black;
+}
+
+#jadwal2 {
+   
+    font-family: 'Poppins', arial;
+    color: black;
+}
+
+#pbd {
+    border-radius: 20px;
+   
+    width: 350px;
+    height: 300px;
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+/* Jadwal Rabu */
+
+.position3 {
+    margin: 50px;
+    width: 350px;
+    float: left;
+    height: auto;
+}
+
+.text3 {
+    margin: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gulzar', fantasy;
+    color: black;
+}
+.pengampu3 {
+    font-family: 'Montserrat', arial;
+    color: black;
+    margin: 20px;
+}
+
+#jadwal3 {
+    font-family: 'Poppins', arial;
+    color: black;
+}
+
+#ansi {
+    display: flex;
+    margin: 10px;
+    border-radius: 20px;
+    width: 340px;
+    height: 300px;
+    flex-wrap: wrap;
+}
+
+
+/* Jadwal kamis */
+
+.position4 {
+    margin: 50px;
+    width: 350px;
+    float: left;
+    height: auto;
+}
+
+.text4 {
+    margin: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gulzar', fantasy;
+}
+
+.pengampu4 {
+    font-family: 'Montserrat', Arial;
+    color: black;
+    margin: 20px;
+}
+
+#jadwal4 {
+    font-family: 'Poppins', arial;
+    color: black;
+}
+
+#kap {
+    display: flex;
+    margin: 10px;
+    border-radius: 10px;
+    width: 340px;
+    height: 300px;
+    flex-wrap: wrap;
+}
+
+/* Jadwal Jumat */
+
+.position5 {
+    margin: 50px;
+    width: 349px;
+    float: left;
+    height: auto;
+}
+
+.text5 {
+    margin: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gulzar', fantasy;
+}
+
+.pengampu5 {
+    font-family: 'Montserrat', Arial;
+    color: black;
+    margin: 20px;
+}
+
+#jadwal5 {
+    font-family: 'Poppins', arial;
+    color: black;
+}
+
+#ro {
+    display: flex;
+    margin: 10px;
+    border-radius: 10px;
+    width: 340px;
+    height: 300px;
+    flex-wrap: wrap;
+}
+
+/* Jadwal  Sabtu*/
+ 
+.position6 {
+    margin: 50px;
+    width: 350px;
+    float: left;
+    height: auto;
+}
+
+.text6 {
+    margin: 20px;
+    text-align: left;
+    font-family: 'Montserrat',sans-serif;
+    font-family: 'Gulzar', fantasy;
+}
+.pengampu6 {
+    font-family: 'Montserrat', arial;
+    color: black;
+    margin: 20px;
+}
+
+#jadwal6 {
+    font-family: 'Poppins', carial;
+    color: black;
+}
+
+#bd {
+    display: flex;
+    margin: 10px;
+    border-radius: 20px;
+    width: 340px;
+    height: 300px;
+    flex-wrap: wrap;
+}
+
+
+.position7 {
+    margin: 50px;
+    width: 350px;
+    float: left;
+    height: auto;
+}
+
+.text7 {
+    margin: 20px;
+    text-align: left;
+    font-family: 'Montserrat',sans-serif;
+    font-family: 'Gulzar', fantasy;
+}
+.pengampu7 {
+    font-family: 'Montserrat', arial;
+    color: black;
+    margin: 20px;
+}
+
+#jadwal7 {
+    font-family: 'Poppins', carial;
+    color: black;
+}
+
+#kb {
+    display: flex;
+    margin: 10px;
+    border-radius: 20px;
+    width: 340px;
+    height: 300px;
+    flex-wrap: wrap;
+}
+
+.position8 {
+    margin: 50px;
+    width: 350px;
+    float: left;
+    height: auto;
+}
+
+.text8 {
+    margin: 20px;
+    text-align: left;
+    font-family: 'Montserrat',sans-serif;
+    font-family: 'Gulzar', fantasy;
+}
+.pengampu8 {
+    font-family: 'Montserrat', arial;
+    color: black;
+    margin: 20px;
+}
+
+#jadwal8 {
+    font-family: 'Poppins', carial;
+    color: black;
+}
+
+#alm {
+    display: flex;
+    margin: 10px;
+    border-radius: 20px;
+    width: 340px;
+    height: 300px;
+    flex-wrap: wrap;
+}
+
+#web:hover {
+    transition: all 1s;
+    transform: scale(1.1);
+}
+
+#pbd:hover {
+    transition: all 1s;
+    transform: scale(1.1);
+}
+
+#ansi:hover {
+    transition: all 1s;
+    transform: scale(1.1);
+}
+
+#kap:hover {
+    transition: all 1s;
+    transform: scale(1.1);
+}
+
+#ro:hover {
+    transition: all 1s;
+    transform: scale(1.1);
+}
+
+#bd:hover {
+    transition: all 1s;
+    transform: scale(1.1);
+}
+
+#kb:hover {
+    transition: all 1s;
+    transform: scale(1.1);
+}
+
+#alm:hover {
+    transition: all 1s;
+    transform: scale(1.1);
+}
+
+#running {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* footer */
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-utama{
+	background-color: #52297a;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-utama .footer-kiri,
+.footer-utama .footer-center,
+.footer-utama .footer-kanan{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer kiri */
+
+.footer-utama .footer-kiri{
+	width: 30%;
+}
+
+.footer-utama h3{
+	color:  #1e0606;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-utama .footer-kiri img{
+	width: 30%;
+}
+
+.footer-utama h3 span{
+	color:  #e31818;
+}
+
+/* Footer links */
+
+.footer-utama .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-utama .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-utama .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-utama .footer-center{
+	width: 35%;
+}
+
+
+.footer-utama .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-utama .footer-center i.alert{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-utama .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-utama .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-utama .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-utama .footer-kanan{
+	width: 30%;
+}
+
+.footer-utama .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-utama .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+/* code untuk footer agar Responsive  */
+
+
+@media (max-width: 880px) {
+
+	.footer-utama .footer-kiri, 
+	.footer-utama .footer-center,
+	.footer-utama .footer-kanan{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-utama .footer-center i{
+		margin-left: 0;
+	}
+
+}
